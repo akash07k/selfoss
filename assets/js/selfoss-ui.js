@@ -1,3 +1,5 @@
+import selfoss from './selfoss-base';
+
 /**
  * ui change functions
  */
@@ -127,7 +129,10 @@ selfoss.ui = {
                 <button class="stream-button mark-these-read" aria-label="${selfoss.translate('markread')}</span>"><span>${selfoss.translate('markread')}</span></button>
                 <button class="stream-button stream-error" aria-live="assertive" aria-label="${selfoss.translate('streamerror')}">${selfoss.translate('streamerror')}</button>
             </div>
-        </div>`);
+        </div>
+
+        <link rel="stylesheet" href="user.css" />
+        <script src="user.js"></script>`);
     },
 
     showLogin: function(error) {
