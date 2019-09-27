@@ -218,7 +218,7 @@ selfoss.events.entries = function() {
             error: function(jqXHR, textStatus, errorThrown) {
                 content.html(articleList);
                 $('#content').removeClass('loading');
-                alert($('#lang').data('error_refreshing_source') + ' ' + errorThrown);
+                alert(selfoss.translate('error_refreshing_source') + ' ' + errorThrown);
             },
             timeout: 0
         });

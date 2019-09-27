@@ -24,11 +24,11 @@ selfoss.ui = {
             <form action="" method="post">
             <ul id="login">
                 <li><h1>${selfoss.config.htmlTitle} login</h1></li>
-                <li><label for="username">${$('#lang').data('login_username')}</label> <input type="text" name="username" id="username" accesskey="u" autocomplete="username" required></li>
-                <li><label for="password">${$('#lang').data('login_password')}</label> <input type="password" name="password" id="password" accesskey="p" autocomplete="current-password"></li>
-                <li><label for="enableoffline">${$('#lang').data('login_offline')}</label> <input type="checkbox" name="enableoffline" id="enableoffline" accesskey="o"></li>
+                <li><label for="username">${selfoss.translate('login_username')}</label> <input type="text" name="username" id="username" accesskey="u" autocomplete="username" required></li>
+                <li><label for="password">${selfoss.translate('login_password')}</label> <input type="password" name="password" id="password" accesskey="p" autocomplete="current-password"></li>
+                <li><label for="enableoffline">${selfoss.translate('login_offline')}</label> <input type="checkbox" name="enableoffline" id="enableoffline" accesskey="o"></li>
                 <li class="error" aria-live="assertive"></li>
-                <li class="button"><label>&nbsp;</label><input type="submit" accesskey="l" value="${$('#lang').data('login')}" /></li>
+                <li class="button"><label>&nbsp;</label><input type="submit" accesskey="l" value="${selfoss.translate('login')}" /></li>
             </ul>
             </form>
         </div>
@@ -42,38 +42,38 @@ selfoss.ui = {
                         <span class="count"></span>
                     </div>
                 </div>
-                <button id="nav-mobile-settings" accesskey="t" aria-label="${$('#lang').data('settingsbutton')}"></button>
+                <button id="nav-mobile-settings" accesskey="t" aria-label="${selfoss.translate('settingsbutton')}"></button>
             </div>
 
             <!-- navigation -->
             <div id="nav" role="navigation">
                 <div id="nav-logo"></div>
-                <button accesskey="a" id="nav-mark">${$('#lang').data('markread')}</button>
+                <button accesskey="a" id="nav-mark">${selfoss.translate('markread')}</button>
 
                 <div id="nav-filter-wrapper">
-                <h2><button type="button" id="nav-filter-title" class="nav-filter-expanded" aria-expanded="true">${$('#lang').data('filter')}</button></h2>
+                <h2><button type="button" id="nav-filter-title" class="nav-filter-expanded" aria-expanded="true">${selfoss.translate('filter')}</button></h2>
                 <ul id="nav-filter" aria-labeledby="nav-filter-title">
                     <li>
                         <a id="nav-filter-newest" class="nav-filter-newest" href="#">
-                            ${$('#lang').data('newest')}
-                            <span class="offline-count offlineable" title="${$('#lang').data('offline_count')}"></span>
-                            <span class="count" title="${$('#lang').data('online_count')}"></span>
+                            ${selfoss.translate('newest')}
+                            <span class="offline-count offlineable" title="${selfoss.translate('offline_count')}"></span>
+                            <span class="count" title="${selfoss.translate('online_count')}"></span>
                         </a>
                     </li>
                     <li>
                         <a id="nav-filter-unread" class="nav-filter-unread" href="#">
-                            ${$('#lang').data('unread')}
+                            ${selfoss.translate('unread')}
                             <span class="unread-count offlineable">
-                                <span class="offline-count offlineable" title="${$('#lang').data('offline_count')}"></span>
-                                <span class="count" title="${$('#lang').data('online_count')}"></span>
+                                <span class="offline-count offlineable" title="${selfoss.translate('offline_count')}"></span>
+                                <span class="count" title="${selfoss.translate('online_count')}"></span>
                             </span>
                         </a>
                     </li>
                     <li>
                         <a id="nav-filter-starred" class="nav-filter-starred" href="#">
-                            ${$('#lang').data('starred')}
-                            <span class="offline-count offlineable" title="${$('#lang').data('offline_count')}"></span>
-                            <span class="count" title="${$('#lang').data('online_count')}"></span>
+                            ${selfoss.translate('starred')}
+                            <span class="offline-count offlineable" title="${selfoss.translate('offline_count')}"></span>
+                            <span class="count" title="${selfoss.translate('online_count')}"></span>
                         </a>
                     </li>
                 </ul>
@@ -82,11 +82,11 @@ selfoss.ui = {
                 <hr>
 
                 <div id="nav-tags-wrapper">
-                <h2><button type="button" id="nav-tags-title" class="nav-tags-expanded" aria-expanded="true">${$('#lang').data('tags')}</button></h2>
+                <h2><button type="button" id="nav-tags-title" class="nav-tags-expanded" aria-expanded="true">${selfoss.translate('tags')}</button></h2>
                 <ul id="nav-tags" aria-labeledby="nav-tags-title">
-                    <li><a class="active nav-tags-all" href="#">${$('#lang').data('alltags')}</a></li>
+                    <li><a class="active nav-tags-all" href="#">${selfoss.translate('alltags')}</a></li>
                 </ul>
-                <h2><button type="button" id="nav-sources-title" class="nav-sources-collapsed" aria-expanded="false">${$('#lang').data('sources')}</button></h2>
+                <h2><button type="button" id="nav-sources-title" class="nav-sources-collapsed" aria-expanded="false">${selfoss.translate('sources')}</button></h2>
                 <ul id="nav-sources" aria-labeledby="nav-sources-title">
                 </ul>
                 </div>
@@ -95,23 +95,23 @@ selfoss.ui = {
 
                 <!-- navigation search input just for smartphone version -->
                 <div id="nav-search" class="offlineable" role="search">
-                    <input aria-label="${$('#lang').data('search_label')}" type="search" id="nav-search-term" accesskey="s"> <input type="button" id="nav-search-button" value="${$('#lang').data('searchbutton')}" accesskey="e">
+                    <input aria-label="${selfoss.translate('search_label')}" type="search" id="nav-search-term" accesskey="s"> <input type="button" id="nav-search-button" value="${selfoss.translate('searchbutton')}" accesskey="e">
                     <hr>
                 </div>
 
                 <div class="nav-toolbar">
-                    <button id="nav-refresh" title="${$('#lang').data('refreshbutton')}" aria-label="${$('#lang').data('refreshbutton')}" accesskey="r"></button>
-                    <button id="nav-settings" title="${$('#lang').data('settingsbutton')}" aria-label="${$('#lang').data('settingsbutton')}" accesskey="t"></button>
-                    <button id="nav-logout" title="${$('#lang').data('logoutbutton')}" aria-label="${$('#lang').data('logoutbutton')}" accesskey="l"></button>
-                    <button id="nav-login" title="${$('#lang').data('loginbutton')}" aria-label="${$('#lang').data('loginbutton')}" accesskey="l"></button>
+                    <button id="nav-refresh" title="${selfoss.translate('refreshbutton')}" aria-label="${selfoss.translate('refreshbutton')}" accesskey="r"></button>
+                    <button id="nav-settings" title="${selfoss.translate('settingsbutton')}" aria-label="${selfoss.translate('settingsbutton')}" accesskey="t"></button>
+                    <button id="nav-logout" title="${selfoss.translate('logoutbutton')}" aria-label="${selfoss.translate('logoutbutton')}" accesskey="l"></button>
+                    <button id="nav-login" title="${selfoss.translate('loginbutton')}" aria-label="${selfoss.translate('loginbutton')}" accesskey="l"></button>
                 </div>
             </div>
 
             <!-- search -->
             <div id="search" role="search" class="offlineable">
-                <input aria-label="${$('#lang').data('search_label')}" type="search" id="search-term" accesskey="s">
-                <button id="search-remove" title="${$('#lang').data('searchremove')}" accesskey="h" aria-label="${$('#lang').data('searchremove')}"><img src="images/remove.png" aria-hidden="true" alt=""></button>
-                <button id="search-button" title="${$('#lang').data('searchbutton')}" aria-label="${$('#lang').data('searchbutton')}" accesskey="e"><img src="images/search.png" alt=""></button>
+                <input aria-label="${selfoss.translate('search_label')}" type="search" id="search-term" accesskey="s">
+                <button id="search-remove" title="${selfoss.translate('searchremove')}" accesskey="h" aria-label="${selfoss.translate('searchremove')}"><img src="images/remove.png" aria-hidden="true" alt=""></button>
+                <button id="search-button" title="${selfoss.translate('searchbutton')}" aria-label="${selfoss.translate('searchbutton')}" accesskey="e"><img src="images/search.png" alt=""></button>
             </div>
 
             <ul id="search-list">
@@ -122,10 +122,10 @@ selfoss.ui = {
             </div>
 
             <div id="stream-buttons">
-                <p aria-live="assertive" class="stream-empty">${$('#lang').data('no_entries')}</p>
-                <button class="stream-button stream-more" accesskey="m" aria-label="${$('#lang').data('more')}"><span>${$('#lang').data('more')}</span></button>
-                <button class="stream-button mark-these-read" aria-label="${$('#lang').data('markread')}</span>"><span>${$('#lang').data('markread')}</span></button>
-                <button class="stream-button stream-error" aria-live="assertive" aria-label="${$('#lang').data('streamerror')}">${$('#lang').data('streamerror')}</button>
+                <p aria-live="assertive" class="stream-empty">${selfoss.translate('no_entries')}</p>
+                <button class="stream-button stream-more" accesskey="m" aria-label="${selfoss.translate('more')}"><span>${selfoss.translate('more')}</span></button>
+                <button class="stream-button mark-these-read" aria-label="${selfoss.translate('markread')}</span>"><span>${selfoss.translate('markread')}</span></button>
+                <button class="stream-button stream-error" aria-live="assertive" aria-label="${selfoss.translate('streamerror')}">${selfoss.translate('streamerror')}</button>
             </div>
         </div>`);
     },
@@ -323,10 +323,10 @@ selfoss.ui = {
         // update button
         if (starred) {
             button.addClass('active');
-            button.html($('#lang').data('unstar'));
+            button.html(selfoss.translate('unstar'));
         } else {
             button.removeClass('active');
-            button.html($('#lang').data('star'));
+            button.html(selfoss.translate('star'));
         }
     },
 
@@ -339,11 +339,11 @@ selfoss.ui = {
         // update button and entry style
         if (unread) {
             button.addClass('active');
-            button.html($('#lang').data('mark'));
+            button.html(selfoss.translate('mark'));
             parent.addClass('unread');
         } else {
             button.removeClass('active');
-            button.html($('#lang').data('unmark'));
+            button.html(selfoss.translate('unmark'));
             parent.removeClass('unread');
         }
     },

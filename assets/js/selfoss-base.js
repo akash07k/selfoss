@@ -56,7 +56,7 @@ var selfoss = {
                     selfoss.initMain(configuration);
                 } catch (e) {
                     // TODO: Add a more proper error page
-                    $('body').html($('#lang').data('error_configuration'));
+                    $('body').html(selfoss.translate('error_configuration'));
                 }
             }
         });
@@ -251,7 +251,7 @@ var selfoss = {
             url: 'logout',
             dataType: 'json',
             error: function(jqXHR, textStatus, errorThrown) {
-                selfoss.ui.showError($('#lang').data('error_logout') + ' ' +
+                selfoss.ui.showError(selfoss.translate('error_logout') + ' ' +
                                      textStatus + ' ' + errorThrown);
             }
         });
@@ -380,7 +380,7 @@ var selfoss = {
                 selfoss.events.navigation();
             },
             error: function(jqXHR, textStatus, errorThrown) {
-                selfoss.ui.showError($('#lang').data('error_load_tags') + ' ' +
+                selfoss.ui.showError(selfoss.translate('error_load_tags') + ' ' +
                                      textStatus + ' ' + errorThrown);
             },
             complete: function() {
@@ -402,7 +402,7 @@ var selfoss = {
         $('#nav-tags').append(tags);
         if (selfoss.filter.tag) {
             if (!selfoss.db.isValidTag(selfoss.filter.tag)) {
-                selfoss.ui.showError($('#lang').data('error_unknown_tag') + ' ' + selfoss.filter.tag);
+                selfoss.ui.showError(selfoss.translate('error_unknown_tag') + ' ' + selfoss.filter.tag);
             }
 
             $('#nav-tags li:first a').removeClass('active');
@@ -434,7 +434,7 @@ var selfoss = {
         $('#nav-sources').append(sources);
         if (selfoss.filter.source) {
             if (!selfoss.db.isValidSource(selfoss.filter.source)) {
-                selfoss.ui.showError($('#lang').data('error_unknown_source') + ' '
+                selfoss.ui.showError(selfoss.translate('error_unknown_source') + ' '
                                      + selfoss.filter.source);
             }
 
@@ -603,7 +603,7 @@ var selfoss = {
                     content.html(articleList);
                     selfoss.ui.refreshStreamButtons(true, hadMore);
                     selfoss.ui.listReady();
-                    selfoss.ui.showError($('#lang').data('error_mark_items') +
+                    selfoss.ui.showError(selfoss.translate('error_mark_items') +
                                          ' ' + textStatus + ' ' + errorThrown);
                 });
             }
@@ -621,7 +621,7 @@ var selfoss = {
             handled.reject();
             if (httpCode == 403) {
                 selfoss.ui.logout();
-                selfoss.ui.showLogin($('#lang').data('error_session_expired'));
+                selfoss.ui.showLogin(selfoss.translate('error_session_expired'));
             }
             return handled;
         }
@@ -645,6 +645,16 @@ var selfoss = {
             awaitStateChange();
             reg.addEventListener('updatefound', awaitStateChange);
         }
+    },
+
+
+    /**
+    * Obtain a localized message for given key.
+    * @param string
+    * @return string
+    */
+    translate: function(key) {
+        return $('#lang').data(key);
     },
 
 
