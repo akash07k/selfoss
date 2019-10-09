@@ -102,11 +102,13 @@ selfoss.ui = {
                     <hr />
                 </div>
 
-                <div class="nav-toolbar">
-                    <button id="nav-refresh" title={selfoss.ui._('refreshbutton')} aria-label={selfoss.ui._('refreshbutton')} accesskey="r"></button>
-                    <button id="nav-settings" title={selfoss.ui._('settingsbutton')} aria-label={selfoss.ui._('settingsbutton')} accesskey="t"></button>
-                    <button id="nav-logout" title={selfoss.ui._('logoutbutton')} aria-label={selfoss.ui._('logoutbutton')} accesskey="l"></button>
-                    <button id="nav-login" title={selfoss.ui._('loginbutton')} aria-label={selfoss.ui._('loginbutton')} accesskey="l"></button>
+                <div class="nav-toolbar" id="nav_toolbar" aria-label={selfoss.ui._('nav_toolbar')}>
+                    <ul aria-labelledby="nav_toolbar">
+                        <li><button id="nav-refresh" title={selfoss.ui._('refreshbutton')} aria-label={selfoss.ui._('refreshbutton')} accesskey="r"></button></li>
+                        <li><button id="nav-settings" title={selfoss.ui._('settingsbutton')} aria-label={selfoss.ui._('settingsbutton')} accesskey="t"></button></li>
+                        <li><button id="nav-logout" title={selfoss.ui._('logoutbutton')} aria-label={selfoss.ui._('logoutbutton')} accesskey="l"></button></li>
+                        <li><button id="nav-login" title={selfoss.ui._('loginbutton')} aria-label={selfoss.ui._('loginbutton')} accesskey="l"></button></li>
+</ul>
                 </div>
             </div>
 

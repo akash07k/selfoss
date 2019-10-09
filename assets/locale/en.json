@@ -80,5 +80,6 @@
   "lang_error_offline_storage": "Offline storage error: {0}. Reloading may help. Disabling offline for now.",
   "lang_error_invalid_subsection": "Invalid subsection:",
   "lang_error_configuration": "Unable to load configuration.",
-  "lang_article_actions": "Actions"
+  "lang_article_actions": "Actions",
+  "lang_nav_toolbar": "Actions"
 }
