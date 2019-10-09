@@ -23,7 +23,7 @@ selfoss.ui = {
             return;
         }
 
-        $('body').append(<div id="loginform">
+        $('body').append(<div id="loginform" role="main">
             <form action="" method="post">
                 <ul id="login">
                     <li><h1>{`${selfoss.config.htmlTitle} login`}</h1></li>
