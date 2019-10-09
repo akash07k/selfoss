@@ -102,7 +102,7 @@ selfoss.ui = {
                     <hr />
                 </div>
 
-                <div class="nav-toolbar" id="nav_toolbar" aria-label={selfoss.ui._('nav_toolbar')}>
+                <div class="nav-toolbar" id="nav_toolbar" aria-label={selfoss.ui._('nav_toolbar')} role="toolbar">
                     <ul aria-labelledby="nav_toolbar">
                         <li><button id="nav-refresh" title={selfoss.ui._('refreshbutton')} aria-label={selfoss.ui._('refreshbutton')} accesskey="r"></button></li>
                         <li><button id="nav-settings" title={selfoss.ui._('settingsbutton')} aria-label={selfoss.ui._('settingsbutton')} accesskey="t"></button></li>
